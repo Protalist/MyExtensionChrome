@@ -1,10 +1,27 @@
 {
-  "name": "Getting Started Example",
+
+  "manifest_version": 2,
+
+  "name": "click lazy button",
   "version": "1.0",
-  "description": "Build an Extension!",
-  "background": {
-    "permissions": ["activeTab"]
+  "description": "CLick button in automatic if exist",
+
+
+
+  "browser_action": {
+    "default_popup": "popup.html",
+
+    "default_icon": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    }
   },
+
+
+
+
   "content_scripts": [
     { 
       "matches" : ["https://*/*"],
@@ -12,5 +29,11 @@
       "run_at": "document_start"
     }
   ],
-  "manifest_version": 2
+  
+
+
+  "permissions": [
+    "activeTab"
+ ]
+
 }
